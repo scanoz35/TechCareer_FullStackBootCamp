@@ -1,0 +1,99 @@
+
+body{
+    display: flex;
+}
+
+
+.navbar {
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+width: 23rem;
+height: 100vh;
+background-color: #BD5D38;
+}
+
+.pp {
+    width: 130px;
+    height: 130px;
+    border: 0.5rem solid #CA7D60;
+    border-radius: 50% !important;
+}
+
+.navbar ul li:first-child a{
+    color: #fff;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #E1B6A5;
+}
+
+.navbar ul li {
+    margin: 1rem;
+    font-family: 'Mulish', sans-serif;
+    font-weight: 700;
+    letter-spacing: 0.05rem;
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    flex-direction: column;
+    padding: 11rem 3rem;
+}
+
+.firstname {
+    font-family: 'Saira Extra Condensed', sans-serif;
+    color: #343A40;
+    text-transform: uppercase;
+    font-size: 5rem;
+    font-weight: 800;
+}
+.lastname {
+    color: #BD5D38;
+}
+
+.subheading{
+    font-family: 'Saira Extra Condensed', sans-serif;
+    text-transform: uppercase;
+    font-weight: 550;
+    font-size: 1.3rem;
+    margin-bottom: 2rem !important;
+    color: #6C757D;
+}
+.subheading a {
+    color: #BD5D38;
+}
+.subheading a:hover{
+    color: #974a2d;
+}
+.about-content p {
+    font-family: 'Mulish', sans-serif;
+    font-size: 1rem;
+    font-weight: 200;
+    margin-bottom: 2rem !important;
+    color: #6C757D;
+}
+
+.social-icons{
+    display: flex;
+}
+
+.social-icons a{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    height: 3rem;
+    width: 3rem;
+    background-color: #495057;
+    color: #fff !important;
+    border-radius: 100%;
+    font-size: 1.3rem;
+    margin-right: 1rem;
+    text-decoration: none;
+}
