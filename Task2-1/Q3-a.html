@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3-a</title>
+</head>
+<body>
+
+    
+    
+</body>
+
+<script>
+
+    fetch('https://northwind.vercel.app/api/orders')
+    .then(res => res.json())
+    .then(res => {
+
+
+        res.forEach(element => {
+            const date = new Date(element.orderDate);
+            if(date.getFullYear() === 1996) {
+           console.log("Order's date: " + date)
+            }
+        });
+        
+    })
+
+</script>
+
+</html>

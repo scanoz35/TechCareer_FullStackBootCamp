@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q1</title>
+</head>
+<body>
+    <ul>
+        
+    </ul>
+</body>
+
+<script>
+
+fetch('https://northwind.vercel.app/api/orders')
+    .then(res => res.json())
+    .then(res => {
+        for (let i = 0; i < res.length; i++) {
+            var liElement = document.createElement('li');
+            liElement.innerText = res[i].customerId;
+            document.querySelector('ul').appendChild(liElement);
+            
+        }
+    })
+
+</script>
+
+</html>

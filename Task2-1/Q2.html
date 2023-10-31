@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <title>Q2</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+axios.get('https://northwind.vercel.app/api/orders')
+.then(res => {
+
+    var orders = res.data;
+    var counterUSA = 0;
+
+    orders.forEach(element => {
+        if(element.shipAddress.country === "USA") {
+            counterUSA += 1;
+        }
+
+
+    });
+
+    console.log("Orders' count from USA: " + counterUSA)
+})
+    
+
+</script>
+
+</html>

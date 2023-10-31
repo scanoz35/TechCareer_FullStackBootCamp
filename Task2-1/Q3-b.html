@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3-b</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+fetch("https://northwind.vercel.app/api/orders")
+.then(res => res.json())
+.then(res => {
+
+    res.forEach(element => {
+
+        const requiredDate = new Date(element.requiredDate);
+        const shippedDate = new Date(element.shippedDate);
+
+        if(shippedDate > requiredDate) {
+            console.log("Order must delivered at : " + element.requiredDate + "\n Order delivered at : " + element.shippedDate)
+        }
+        
+    });
+})
+
+</script>
+
+</html>
