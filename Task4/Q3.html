@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q3</title>
+</head>
+<body>
+
+    <ul>
+
+    </ul>
+    
+</body>
+
+<script>
+
+    /* bir ul aç. Dışarıdan aldığın datayı FETCH ile içerisine doldur. Li içerisinde companyName yazacak */
+
+fetch("https://northwind.vercel.app/api/suppliers")
+      .then((res) => res.json())
+      .then((res) => {
+
+        var suppliers = res;
+
+        suppliers.forEach(element => {
+            var liElement = document.createElement("li");
+
+            liElement.innerText = element.companyName;
+            document.querySelector("ul").appendChild(liElement);
+
+        });
+      });
+
+</script>
+
+</html>
